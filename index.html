@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Inocêncio | Software Developer & Social Media Designer</title>
+    <meta name="description" content="Portfólio de Pedro Inocêncio, Software Developer e Social Media Designer, com projetos em web, design e conteúdo digital.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS e JS links -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <script src="src/scripts/main.js" defer></script>
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#home" class="logo">
+            </a>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link" data-i18n="nav.about">Sobre</a></li>
+                    <li><a href="#services" class="nav__link" data-i18n="nav.services">Serviços</a></li>
+                    <li><a href="#works" class="nav__link" data-i18n="nav.projects">Projetos</a></li>
+                    <li><a href="#experience" class="nav__link" data-i18n="nav.experience">Trajetória</a></li>
+                    <li><a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <!-- Ícone de fechar para mobile -->
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema" data-i18n-aria="controls.themeAria">
+                    <svg class="theme-toggle__icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                        <mask id="theme-toggle-mask">
+                            <rect x="0" y="0" width="24" height="24" fill="white"></rect>
+                            <circle class="theme-toggle__mask" cx="33" cy="0" r="9" fill="black"></circle>
+                        </mask>
+                        <circle class="theme-toggle__body" cx="12" cy="12" r="5" mask="url(#theme-toggle-mask)"></circle>
+                        <g class="theme-toggle__rays">
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="5.64" y1="5.64" x2="4.22" y2="4.22"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            <line x1="5.64" y1="18.36" x2="4.22" y2="19.78"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        </g>
+                    </svg>
+                </button>
+                <button class="control-btn" id="lang-toggle" type="button" aria-label="Mudar idioma" data-i18n-aria="controls.langAria">EN</button>
+                <a href="#contact" class="btn btn--primary header__btn" data-i18n="nav.contact">Fale Comigo</a>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <!-- Ícone hamburger para mobile -->
+                <span class="toggle__line"></span>
+                <span class="toggle__line"></span>
+                <span class="toggle__line"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        
+        <!-- ================= HERO ================= -->
+        <section class="hero section" id="home">
+            <div class="container hero__cover">
+                <p class="hero__eyebrow reveal" data-i18n="hero.eyebrow">My Portfolio</p>
+                <h1 class="hero__name reveal delay-1"><span class="hero__name-gradient">Pedro Inocêncio</span></h1>
+                <p class="hero__headline reveal delay-2">
+                    <span data-i18n="hero.titleA">Desenvolvo</span>
+                    <span class="hero__word-wrapper">
+                        <span id="hero-word" class="hero__word">interfaces</span>
+                    </span>
+                    <span data-i18n="hero.titleB">com propósito.</span>
+                </p>
+                <div class="hero__buttons reveal delay-3">
+                    <a href="#about" class="btn btn--primary" data-i18n="hero.about">Sobre mim</a>
+                    <a href="#works" class="btn btn--secondary" data-i18n="hero.projects">Ver projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about section" id="about">
+            <div class="container about__container">
+                <div class="about__media reveal">
+                    <img src="assets/images/profile.png" alt="Pedro Inocêncio" class="about__photo">
+                </div>
+
+                <div class="about__content reveal delay-1">
+                    <span class="about__label" data-i18n="about.label">Sobre mim</span>
+                    <h2 class="section__title" data-i18n="about.title">Software Developer & Social Media Designer.</h2>
+                    <p class="about__description" data-i18n="about.description">
+                        Sou Pedro Inocêncio. Trabalho criando soluções digitais, páginas responsivas e peças para redes sociais que unem código limpo, hierarquia visual e atenção ao detalhe.
+                    </p>
+
+                    <div class="scout-card">
+                        <span class="scout-card__label" data-i18n="about.scout.label">Escotismo</span>
+                        <h3 data-i18n="about.scout.title">Desde os 2 anos no Grupo Escoteiro Padre Aleixo Monteiro Mafra.</h3>
+                        <p data-i18n="about.scout.description">Faço parte do movimento escoteiro em São Miguel Paulista desde a infância. Essa vivência fortaleceu disciplina, liderança, trabalho em equipe, responsabilidade social e capacidade de resolver problemas com autonomia.</p>
+                    </div>
+
+                </div>
+
+                <div class="about__summary reveal delay-2" aria-label="Resumo pessoal">
+                    <div class="summary-card">
+                        <span class="summary-card__label" data-i18n="about.summary.role.label">Atuação</span>
+                        <strong data-i18n="about.summary.role.value">Software & Design</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-card__label" data-i18n="about.summary.scout.label">Escotismo</span>
+                        <strong data-i18n="about.summary.scout.value">Desde os 2 anos</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span class="summary-card__label" data-i18n="about.summary.focus.label">Foco</span>
+                        <strong data-i18n="about.summary.focus.value">Web, marca e social media</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES ================= -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title" data-i18n="services.title">O que eu faço</h2>
+                    <p class="section__subtitle" data-i18n="services.subtitle">Software, interfaces e identidade visual trabalhando juntos.</p>
+                </div>
+
+                <div class="services__grid">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal">
+                        <div class="service-card__top">
+                            <span class="service-card__number">01</span>
+                            <h3 class="service-card__title" data-i18n="services.web.title">Desenvolvimento Web</h3>
+                        </div>
+                        <p class="service-card__description" data-i18n="services.web.description">Páginas, interfaces e aplicações com estrutura limpa, boa responsividade e atenção à experiência de uso.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card reveal delay-1">
+                        <div class="service-card__top">
+                            <span class="service-card__number">02</span>
+                            <h3 class="service-card__title" data-i18n="services.social.title">Social Media Design</h3>
+                        </div>
+                        <p class="service-card__description" data-i18n="services.social.description">Peças para redes sociais com direção visual consistente, pensadas para campanha, posicionamento e rotina de conteúdo.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card reveal delay-2">
+                        <div class="service-card__top">
+                            <span class="service-card__number">03</span>
+                            <h3 class="service-card__title" data-i18n="services.ui.title">UI/UX Design</h3>
+                        </div>
+                        <p class="service-card__description" data-i18n="services.ui.description">Fluxos, telas e protótipos objetivos, com foco em leitura, hierarquia e decisões simples para quem usa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= RECENT WORKS ================= -->
+        <section class="works section" id="works">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title" data-i18n="works.title">Trabalhos recentes</h2>
+                    <p class="section__subtitle" data-i18n="works.subtitle">Uma seleção em formato de janelas, com páginas do meu portfólio de design e projetos digitais.</p>
+                </div>
+
+                <div class="browser-carousel reveal delay-1">
+                    <div class="browser-carousel__viewport">
+                        <div class="browser-carousel__track" id="carousel-track">
+                            <!-- Slide 1 -->
+                            <article class="browser-window" data-slide="0">
+                                <div class="browser-window__toolbar">
+                                    <div class="browser-window__dots">
+                                        <span class="dot dot--close"></span>
+                                        <span class="dot dot--minimize"></span>
+                                        <span class="dot dot--expand"></span>
+                                    </div>
+                                    <span class="browser-window__title">Portfolio Design 2026</span>
+                                </div>
+                                <div class="browser-window__content">
+                                    <button class="portfolio-preview" id="portfolio-open" type="button" aria-haspopup="dialog" aria-controls="portfolio-modal">
+                                        <div class="portfolio-preview__fallback">
+                                            <span>Portfólio 2026</span>
+                                            <strong>Pedro Inocêncio</strong>
+                                            <small>Design, social media e interfaces</small>
+                                        </div>
+                                        <span class="portfolio-preview__badge">Abrir portfólio</span>
+                                    </button>
+                                </div>
+                            </article>
+                            <!-- Slide 2 -->
+                            <article class="browser-window" data-slide="1">
+                                <div class="browser-window__toolbar">
+                                    <div class="browser-window__dots">
+                                        <span class="dot dot--close"></span>
+                                        <span class="dot dot--minimize"></span>
+                                        <span class="dot dot--expand"></span>
+                                    </div>
+                                    <span class="browser-window__title">Arch Valor</span>
+                                </div>
+                                <div class="browser-window__content">
+                                    <div class="browser-window__placeholder browser-window__placeholder--arch">
+                                        <span class="placeholder__eyebrow">Social Media</span>
+                                        <span class="placeholder__label">Arch Valor</span>
+                                        <span class="placeholder__copy">Composição premium, leitura rápida e presença visual para marca ligada à arquitetura.</span>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Slide 3 -->
+                            <article class="browser-window" data-slide="2">
+                                <div class="browser-window__toolbar">
+                                    <div class="browser-window__dots">
+                                        <span class="dot dot--close"></span>
+                                        <span class="dot dot--minimize"></span>
+                                        <span class="dot dot--expand"></span>
+                                    </div>
+                                    <span class="browser-window__title" data-i18n="works.devProject">Software Lab</span>
+                                </div>
+                                <div class="browser-window__content">
+                                    <div class="browser-window__placeholder browser-window__placeholder--dev">
+                                        <span class="placeholder__eyebrow">Software</span>
+                                        <span class="placeholder__label">Software Lab</span>
+                                        <span class="placeholder__copy">Páginas responsivas, estrutura limpa, interações leves e acabamento visual.</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="browser-carousel__nav">
+                        <button class="carousel-btn carousel-btn--prev" id="carousel-prev" type="button" aria-label="Anterior">‹</button>
+                        <div class="carousel-dots" id="carousel-dots">
+                            <button class="carousel-dot is-active" data-index="0" type="button"></button>
+                            <button class="carousel-dot" data-index="1" type="button"></button>
+                            <button class="carousel-dot" data-index="2" type="button"></button>
+                        </div>
+                        <button class="carousel-btn carousel-btn--next" id="carousel-next" type="button" aria-label="Próximo">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EXPERIENCE & EDUCATION ================= -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <div class="experience__grid">
+                    <!-- Coluna Experiência -->
+                    <div class="timeline__column reveal">
+                        <h2 class="timeline__title" data-i18n="experience.title">Experiência Profissional</h2>
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <span class="timeline__dot"></span>
+                                <span class="timeline__date" data-i18n="experience.current">Atual</span>
+                                <h3 class="timeline__role" data-i18n="experience.roleCurrent">Designer Gráfico</h3>
+                                <p class="timeline__company">Midas Company</p>
+                            </div>
+                            <div class="timeline__item">
+                                <span class="timeline__dot"></span>
+                                <span class="timeline__date" data-i18n="experience.previous">Outros</span>
+                                <h3 class="timeline__role" data-i18n="experience.rolePrevious">Designer de Social Media</h3>
+                                <p class="timeline__company">Dual Company, Conecta Talentos, ASP Softwares, Óticas Imigrante, Zoni Group, Futura Broker, Vizzo Payment Service Provider</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Educação -->
+                    <div class="timeline__column reveal delay-2">
+                        <h2 class="timeline__title" data-i18n="education.title">Educação</h2>
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <span class="timeline__dot"></span>
+                                <span class="timeline__date" data-i18n="education.technicalDate">2023</span>
+                                <h3 class="timeline__role" data-i18n="education.technical">Ensino Técnico</h3>
+                                <p class="timeline__company" data-i18n="education.technicalCompany">ETEC Guaianazes, 3 semestres concluídos</p>
+                            </div>
+                            <div class="timeline__item">
+                                <span class="timeline__dot"></span>
+                                <span class="timeline__date" data-i18n="education.higherDate">Previsão: dez. 2027</span>
+                                <h3 class="timeline__role" data-i18n="education.higher">Ensino Superior</h3>
+                                <p class="timeline__company" data-i18n="education.higherCompany">FATEC Mogi das Cruzes, 3º semestre</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS ================= -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title" data-i18n="skills.title">Ferramentas e áreas</h2>
+                    <p class="section__subtitle" data-i18n="skills.subtitle">Tecnologias e ferramentas que uso para transformar ideias em experiências reais.</p>
+                </div>
+            </div>
+
+            <div class="skills-slider reveal delay-1">
+                <div class="skills-slider__track">
+                    <span class="skill-tag"><span class="skill-icon">H</span>HTML</span>
+                    <span class="skill-tag"><span class="skill-icon">C</span>CSS</span>
+                    <span class="skill-tag"><span class="skill-icon">JS</span>JavaScript</span>
+                    <span class="skill-tag"><span class="skill-icon">R</span>React</span>
+                    <span class="skill-tag"><span class="skill-icon">TS</span>TypeScript</span>
+                    <span class="skill-tag"><span class="skill-icon">F</span>Figma</span>
+                    <span class="skill-tag"><span class="skill-icon">Ps</span>Photoshop</span>
+                    <span class="skill-tag"><span class="skill-icon">DS</span>Design Systems</span>
+                    <span class="skill-tag"><span class="skill-icon">H</span>HTML</span>
+                    <span class="skill-tag"><span class="skill-icon">C</span>CSS</span>
+                    <span class="skill-tag"><span class="skill-icon">JS</span>JavaScript</span>
+                    <span class="skill-tag"><span class="skill-icon">R</span>React</span>
+                    <span class="skill-tag"><span class="skill-icon">TS</span>TypeScript</span>
+                    <span class="skill-tag"><span class="skill-icon">F</span>Figma</span>
+                    <span class="skill-tag"><span class="skill-icon">Ps</span>Photoshop</span>
+                    <span class="skill-tag"><span class="skill-icon">DS</span>Design Systems</span>
+                    <span class="skill-tag"><span class="skill-icon">H</span>HTML</span>
+                    <span class="skill-tag"><span class="skill-icon">C</span>CSS</span>
+                    <span class="skill-tag"><span class="skill-icon">JS</span>JavaScript</span>
+                    <span class="skill-tag"><span class="skill-icon">R</span>React</span>
+                    <span class="skill-tag"><span class="skill-icon">TS</span>TypeScript</span>
+                    <span class="skill-tag"><span class="skill-icon">F</span>Figma</span>
+                    <span class="skill-tag"><span class="skill-icon">Ps</span>Photoshop</span>
+                    <span class="skill-tag"><span class="skill-icon">DS</span>Design Systems</span>
+                </div>
+                <div class="skills-slider__blur skills-slider__blur--left" aria-hidden="true"></div>
+                <div class="skills-slider__blur skills-slider__blur--right" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="contact section" id="contact">
+            <div class="container contact__container">
+                <div class="contact__info reveal">
+                    <h2 class="section__title"><span data-i18n="contact.titleA">Tem algo</span> <span class="text-gradient" data-i18n="contact.titleB">em mente?</span></h2>
+                    <p class="contact__description" data-i18n="contact.description">Se você precisa de uma interface, página ou direção visual para conteúdo, me chama e me conta o contexto.</p>
+                    
+                    <ul class="contact__list">
+                        <li>
+                            <span class="contact__label">Email</span>
+                            <a href="mailto:pedroguinocencio@gmail.com" class="contact__link">pedroguinocencio@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact__label">Telefone</span>
+                            <a href="tel:+5511953271031" class="contact__link">11 95327-1031</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact__form-wrapper reveal delay-2">
+                    <form action="" class="contact__form">
+                        <div class="form__group">
+                            <input type="text" placeholder="Seu Nome" class="form__input" data-i18n-placeholder="form.name" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" placeholder="Seu Email" class="form__input" data-i18n-placeholder="form.email" required>
+                        </div>
+                        <div class="form__group">
+                            <textarea placeholder="Sua Mensagem" class="form__input form__textarea" data-i18n-placeholder="form.message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary form__btn" data-i18n="form.submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="#home" class="logo">
+            </a>
+            
+            <div class="footer__social">
+                <a href="#" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/pedroinocen/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://www.behance.net/pedroinocencio1" target="_blank" class="social-link">Behance</a>
+                <a href="https://instagram.com/pedroinocen" target="_blank" class="social-link">Instagram</a>
+            </div>
+
+            <p class="footer__copy" data-i18n="footer.copy">&#169; 2026 Pedro Inocêncio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="pdf-modal" id="portfolio-modal" aria-hidden="true">
+        <div class="pdf-modal__backdrop" data-pdf-close></div>
+        <section class="pdf-modal__window" role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-title" tabindex="-1">
+            <div class="pdf-modal__toolbar">
+                <div class="browser-window__dots" aria-hidden="true">
+                    <button class="dot dot--close" type="button" data-pdf-close aria-label="Fechar portfólio"></button>
+                    <span class="dot dot--minimize"></span>
+                    <span class="dot dot--expand"></span>
+                </div>
+                <h2 class="pdf-modal__title" id="portfolio-modal-title">Portfólio 2026</h2>
+                <a class="pdf-modal__external" href="https://drive.google.com/file/d/13aVqw4hAgvn1aSZfF-QOwwPa9LOqvafW/view?usp=sharing" target="_blank" rel="noopener">Abrir em nova aba</a>
+            </div>
+            <div class="pdf-modal__viewer">
+                <iframe class="pdf-modal__frame" src="https://drive.google.com/file/d/13aVqw4hAgvn1aSZfF-QOwwPa9LOqvafW/preview" title="Portfólio 2026 - Pedro Inocêncio" allow="autoplay"></iframe>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
